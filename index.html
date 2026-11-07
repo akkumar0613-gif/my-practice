@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AD Bhai Nursing</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(160deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+  }
+  .card {
+    width: 90%;
+    max-width: 380px;
+    padding: 28px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+  }
+  h1 { margin: 0 0 6px; font-size: 26px; }
+  .tag { margin: 0 0 22px; opacity: 0.8; font-size: 14px; }
+  a.btn {
+    display: block;
+    margin: 12px 0;
+    padding: 14px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  .yt { background: #e62117; }
+  .ig { background: #c13584; }
+  .quote {
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .quote small { display: block; margin-bottom: 8px; opacity: 0.7; font-style: normal; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>AD Bhai Nursing</h1>
+    <p class="tag">Where Knowledge Meets Focus</p>
+
+    <a class="btn yt" href="https://www.youtube.com/@alok_thought" target="_blank">YouTube Channel</a>
+    <a class="btn ig" href="https://www.instagram.com/alok_kumar_56_/" target="_blank">Instagram</a>
+
+    <div class="quote">
+      <small>Aaj ka thought</small>
+      <span id="q"></span>
+    </div>
+  </div>
+
+<script>
+  var quotes = [
+    "Chhote kadam bhi ek din badi manzil tak pahunchate hain.",
+    "Mehnat ka phal der se milta hai, par milta zaroor hai.",
+    "Aaj ki padhai kal ki pehchaan banti hai.",
+    "Haar tab hoti hai jab hum koshish karna chhod dete hain.",
+    "Focus rakho, raasta apne aap banta jayega."
+  ];
+  var day = Math.floor(Date.now() / 86400000);
+  document.getElementById("q").textContent = quotes[day % quotes.length];
+</script>
+</body>
+</html>
